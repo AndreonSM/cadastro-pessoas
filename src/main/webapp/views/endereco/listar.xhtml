@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Listagem de Endereços</title>
+</h:head>
+<h:body>
+    <h1>Listagem de Endereços</h1>
+    <p:dataTable value="#{enderecoBean.enderecos}" var="endereco" styleClass="primefaces-table">
+        <!-- Colunas da tabela -->
+        <p:column headerText="ID">
+            <h:outputText value="#{endereco.id}" />
+        </p:column>
+        <p:column headerText="Estado">
+            <h:outputText value="#{endereco.estado}" />
+        </p:column>
+        <p:column headerText="Cidade">
+            <h:outputText value="#{endereco.cidade}" />
+        </p:column>
+        <p:column headerText="Logradouro">
+            <h:outputText value="#{endereco.logradouro}" />
+        </p:column>
+        <p:column headerText="Número">
+            <h:outputText value="#{endereco.numero}" />
+        </p:column>
+        <p:column headerText="CEP">
+            <h:outputText value="#{endereco.cep}" />
+        </p:column>
+        <!-- Botões de ação -->
+        <p:column headerText="Ações">
+            <p:commandButton value="Editar" action="#{enderecoBean.editarEndereco}" update=":formEndereco" />
+            <p:commandButton value="Excluir" action="#{enderecoBean.excluirEndereco}" update=":formEndereco" />
+        </p:column>
+    </p:dataTable>
+</h:body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Listagem de Pessoas</title>
+</h:head>
+<h:body>
+    <h1>Listagem de Pessoas</h1>
+    <p:dataTable value="#{pessoaBean.pessoas}" var="pessoa" styleClass="primefaces-table">
+        <!-- Colunas da tabela -->
+        <p:column headerText="ID">
+            <h:outputText value="#{pessoa.id}" />
+        </p:column>
+        <p:column headerText="Nome">
+            <h:outputText value="#{pessoa.nome}" />
+        </p:column>
+        <p:column headerText="Idade">
+            <h:outputText value="#{pessoa.idade}" />
+        </p:column>
+        <p:column headerText="Sexo">
+            <h:outputText value="#{pessoa.sexo}" />
+        </p:column>
+        <!-- Botões de ação -->
+        <p:column headerText="Ações">
+            <p:commandButton value="Editar" action="#{pessoaBean.editarPessoa}" update=":formPessoa" />
+            <p:commandButton value="Excluir" action="#{pessoaBean.excluirPessoa}" update=":formPessoa" />
+        </p:column>
+    </p:dataTable>
+</h:body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+              
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>adicionarPessoa</from-outcome>
+            <to-view-id>/views/pessoa/adicionar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>getPessoas</from-outcome>
+            <to-view-id>/views/pessoa/listar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>editarPessoa</from-outcome>
+            <to-view-id>/views/pessoa/editar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>excluirPessoa</from-outcome>
+            <to-view-id>/views/pessoa/excluir.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>adicionarEndereco</from-outcome>
+            <to-view-id>/views/endereco/adicionar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>getEnderecos</from-outcome>
+            <to-view-id>/views/endereco/listar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>editarEndereco</from-outcome>
+            <to-view-id>/views/endereco/editar.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>excluirEndereco</from-outcome>
+            <to-view-id>/views/endereco/excluir.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

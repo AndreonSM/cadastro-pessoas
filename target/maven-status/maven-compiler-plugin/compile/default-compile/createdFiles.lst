@@ -1,0 +1,8 @@
+model\Pessoa.class
+dao\PessoaDAO.class
+database\DatabaseConnector.class
+bean\EnderecoBean.class
+dao\EnderecoDAO.class
+model\Endereco.class
+bean\PessoaBean.class
+MainPageServlet.class
